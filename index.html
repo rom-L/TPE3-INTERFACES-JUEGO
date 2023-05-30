@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <main class="game-container">
+        <!-- MENUS -->
+        <div class="menu">
+            <div class="main-menu">
+                <img src="./img/other/dragon-ball-logo.png" alt="logo">
+
+                <div class="options">
+                    <div class="play-option option-button">
+                        <h1>Jugar</h1>
+                    </div>
+                    <div class="instructions-option option-button">
+                        <h1>Instrucciones</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instructions-menu hidden">
+                <div class="instructions-container">
+                    <div class="instructions-text-container">
+                        <h1>Objetivo:</h1>
+                        <p>El objetivo es juntar las siete esferas del dragón para ganar, pero cuidado, 
+                           si un enemigo te ataca podés perder una o dos esferas! Las semillas del ermitaño 
+                           te dan una vida extra. Si te transformas sos inmortal por unos cuantos segundos.
+                           Podés agarrar relojes que extienden el tiempo límite. Suerte!
+                        </p>
+
+                        <br>
+                        <br>
+
+                        <h1>Controles:</h1>
+
+                        <br>
+
+                        <p><span>SPACEBAR</span> - Saltar</p>
+                        <p><span>F</span> - Volar</p>
+                        <p><span>W</span> - Volar hacia arriba</p>
+                        <p><span>S</span> - Volar hacia abajo</p>
+
+                    </div>
+                </div>
+
+                <div class="back-to-menu-option option-button">
+                    <h1>Volver</h1>
+                </div>
+            </div>
+
+            <div class="win-menu hidden">
+                <img src="./img/other/winner.png" alt="winner">
+
+                <div class="box-win-lose-container">
+                    <h2>Jugar de nuevo?</h2>
+
+                    <div class="play-option option-button">
+                        <h1>Si</h1>
+                    </div>
+                    <div class="back-to-menu-option option-button">
+                        <h1>No</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lose-menu hidden">
+                <img src="./img/other/loser.png" alt="loser">
+
+                <div class="box-win-lose-container">
+                    <h2>Reintentar?</h2>
+
+                    <div class="play-option option-button">
+                        <h1>Si</h1>
+                    </div>
+                    <div class="back-to-menu-option option-button">
+                        <h1>No</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- GAME -->
+        <h1 class="transformation-timer hidden">10</h1>
+
+        <div class="game-stats">
+            <div class="DB-counter-container">
+                <img src="img/other/dragon-ball.png" alt="dragon ball">
+                <h1 id="DB-counter">x 0</h1>
+            </div>
+
+            <div class="timer-container">
+                <h1 id="timer">00:30</h1>
+            </div>
+
+            <div class="life-counter-container">
+                <img src="img/other/goku-health-icon.png" alt="goku health">
+                <h1 id="life-counter">x 3</h1>
+            </div>
+        </div>
+
+        <div class="parallax" id="sky"></div>
+        <div class="parallax" id="cloud-lonely"></div>
+        <div class="parallax" id="far-clouds"></div>
+        <div class="parallax" id="near-clouds"></div>
+        <div class="parallax" id="far-mountains"></div>
+        <div class="parallax" id="mountains"></div>
+        <div class="parallax" id="trees"></div>
+        <div class="test"></div>
+        <div id="goku"></div>
+        <div class="parallax" id="grass"></div>
+    </main>
+    
+
+
+    
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/Classes/GameManager.js"></script>
+    <script type="module" src="js/Classes/Character.js"></script>
+    <script type="module" src="js/Classes/GameObject.js"></script>
+    <script type="module" src="js/Classes/ObjectPool.js"></script>
+    <script type="module" src="js/Classes/AudioManager.js"></script>
+    <script type="module" src="js/Classes/Parallax.js"></script>
+    <script type="module" src="js/Classes/SenzuBean.js"></script>
+    <script type="module" src="js/Classes/DragonBall.js"></script>
+    <script type="module" src="js/Classes/Clock.js"></script>
+    <script type="module" src="js/Classes/Frieza.js"></script>
+    <script type="module" src="js/Classes/BlastAttack.js"></script>
+    <script type="module" src="js/Classes/KienzanAttack.js"></script>
+    <script type="module" src="js/Classes/TransformPowerUp.js"></script>
+</body>
+</html>
